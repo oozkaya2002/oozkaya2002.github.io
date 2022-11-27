@@ -1,0 +1,19 @@
+
+body {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
+
+.uinput {
+    margin-bottom: 0.25rem;
+}
+
+.ititle {
+    color: lightskyblue;
+}

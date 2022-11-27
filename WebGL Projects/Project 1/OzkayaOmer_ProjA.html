@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>OmerProjectA</title>
+		<link href="OzkayaOmer_ProjA.css" rel="stylesheet" type="text/css">
+    </head>
+
+<!--Create the HTML5 'canvas' element in which we will run WebGL -->
+  
+    <body onload="main()">
+		<h2>Omer Ozkaya WebGL Project A</h2>
+	<hr>
+    <canvas id="webgl">
+        Please use a browser that supports "canvas"
+    </canvas>
+	<hr>
+
+	<p>
+	
+<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+	(where? look inside main(), inside its 'tick()' function, where we
+	display the 'current angle' value.-->
+
+	    <!--<div id= 'CurAngleDisplay' class="angled"></div>-->
+
+<!-- Next, make a simple block of text-->
+
+	    
+
+<!-- Next, make an HTML 'input' box element, a text-box 10 chars wide where users
+	can type in text.  Give it an ID name so that our JavaScript program
+	(e.g. ControlMulti.js, loaded near the end of this file) can access this
+	HTML element by name in the 'tick' function.-->
+      
+	</p>
+	<p>
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+			When users click the button, HTML calls JavaScript functions
+			"spinDown()", "runStop()" and "spinUp()"-->
+
+			<b class="ititle"><i>INSTRUCTIONS</i></b>
+			<br><br>
+			<b>Click and Drag Orbital Stars to move it across the WebGL Canvas</b>
+			<p>Press ( = ) to Speed Up Bird Orbit Speed <br> Press ( - ) to Slow Down Bird Orbit Speed</p>
+			<P>Press ( W ) to increase Bird Flap Speed <br> Press ( S ) to decrease Bird Flap Speed</p>
+			  <button type="button" onclick="spinDown()">Decrease Bird Rotation Speed</button>
+			  <button type="button" onclick="spinUp()">Increase Bird Rotation Speed</button><br><br>
+			  <!-- <button type="button" onClick='clearDrag()'>Clear WebGL Canvas</button> -->
+			  <button type="button" onclick="runStop()">(Run / Stop) Bird Rotation</button>
+			</p>
+			<!--
+				
+			-->
+			<p>Assign New Current Angle (-180 < x < +180 deg)</p>
+			<input id='usrAngle' size=10 class="uinput">
+			<button type="button" onClick='angleSubmit()'>Submit</button>
+			 <div id= EditBoxOut></div>
+
+	<!--
+	Open the JavaScript Console, please: <br>
+    	</t> ('right-click--'Inspect' or 'Inspect element--'Console' tab') <br>
+	-->
+<hr> 
+
+<!-- Draw a horizontal-line separator------------->
+		
+        <!-- myKeyDown() modifies this span object-->
+        
+		<span id='KeyDownResult'  > KeyDown:    </span>		
+        <!-- myKeyDown() modifies this span object-->
+		<br>
+		<span id='KeyModResult'   > KeyMod :<br><br>   </span>
+        <!-- myMouseMove() modifies this span object-->
+		<br>
+		<span id='MouseAtResult'  >   Mouse At:</span>
+		<!-- myMouseUp() modifies this span object-->
+        <br>
+		<span id='MouseDragResult'> Mouse Drag:</span>
+
+<!--Mouse click/drag amounts.  Look in 'console' for event reports;
+	the 'clear' button calls Javascript function 'clearDrag()'
+	whose sole purpose is to set global vars xMdragTot,yMdragTot ==0.0
+	Note we use these totals to rotate the triangle at upper left.-->
+
+		<div id='Mouse'> Mouse Drag totals (CVV coords) </div>
+		<hr>
+
+<!--Load in the JavaScript libraries supplied by textbook-->
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+	
+<!--Finally, load in our own JavaScript program file.-->
+	
+    <script src="OzkayaOmer_ProjA.js"></script>
+  </body>
+</html>

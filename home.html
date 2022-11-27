@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <title>Home - Omer Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <!-- Our top navigation bar -->
+        <div class="topnav">
+          <a href="home.html" class="topnav-text">Home</a>
+          <a href="projects.html" class="topnav-text">Projects</a>
+          <a href="bio.html" class="topnav-text">Bio</a>
+          <a
+            target="blank"
+            href="Resume Omer Fall 2022.pdf"
+            class="topnav-text"
+            alt="Resume - Will open the resume in a new tab"
+            >Resume</a
+          >
+        </div>
+        <h1>Welcome to Omer Ozkaya's site!</h1>
+        <!-- Carousel container -->
+        <div class="slideshow-container">
+          <!-- Astro Dash -->
+          <div class="mySlides fade">
+            <a href="astrodash.html" class="img-link">
+              <img
+                class="slideshow-imgs"
+                src="assets/images/Astro Dash.jpg"
+                alt="Astro Dash - Click on the image to learn more!"
+              />
+            </a>
+            <div class="text">Astro Dash</div>
+          </div>
+          <div class="mySlides fade">
+            <a href="trongame.html" class="img-link">
+              <img
+                class="slideshow-imgs"
+                src="assets/images/CS211 Tron Game.jpg"
+                alt="Tron Game - Click on the image to learn more!"
+              />
+            </a>
+            <div class="text">Tron Game</div>
+          </div>
+
+          <!-- WebGL Project -->
+          <div class="mySlides fade">
+            <a href="webgl.html" class="img-link">
+              <img
+                class="slideshow-imgs"
+                src="assets/images/CS351-1 Graphics-Lighting-Shading project.jpg"
+                alt="WebGL Project - Click on the image to learn more!"
+              />
+            </a>
+            <div class="text" style="color: #0d0138">WebGL Projects</div>
+          </div>
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <!-- Navigation Circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- Description for clicking -->
+        <div style="text-align: center">
+          <p style="font-weight: bold">
+            Click on the image to go to to the corresponding project
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="home.js"></script>
+  </body>
+</html>

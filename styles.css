@@ -1,0 +1,313 @@
+/* ---------------Tag Styling--------------- */
+
+/* Our Font Face */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* HTML styling */
+body {
+  background: linear-gradient(25deg, #7956fa 0%, #c1b6eb 100%);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0d0138;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c1b6eb;
+}
+
+/* Header styling */
+h1,
+h2,
+h3 {
+  color: #0d0138;
+  text-align: center;
+}
+
+/* Line styling */
+hr {
+  background-color: #0d0138;
+  height: 4px;
+  border-radius: 20px;
+  width: 95%;
+}
+
+/* Paragraph styling */
+p {
+  color: #0d0138;
+  font-weight: 100;
+}
+
+/* Hyperlink styling */
+a {
+  color: #0d0138;
+  text-decoration: none;
+}
+
+/* Hyperlink hover styling */
+a:hover {
+  background-color: #c1b6eb;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+
+/* ---------------Universal Styling--------------- */
+
+/* Styling for content div - specifies font used */
+.content {
+  font-family: "Montserrat";
+}
+
+/* Styling for our top navigation */
+.topnav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.topnav-text {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#click-button {
+  text-decoration: none;
+  color: white;
+  background-color: #0d0138;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+
+#click-button:hover {
+  background-color: #c1b6eb;
+}
+
+/* ---------------Slideshow Styling--------------- */
+
+/* Container for our slideshow */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hiding Images */
+.mySlides {
+  display: none;
+}
+
+/* Next and prev buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #0d0138;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #c1b6eb;
+}
+
+/* Caption text */
+.text {
+  color: #c1b6eb;
+  font-size: 15px;
+  padding: 8px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #c1b6eb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #0d0138;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* styling for our images */
+.slideshow-imgs {
+  max-height: 450px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
+.class-link:hover,
+.class-link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* ---------------Projects Page Styling--------------- */
+
+/* Projects Div Styling */
+.projects-top {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 50px;
+  padding-right: 50px;
+  max-width: 1500px;
+}
+
+.projects-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-imgs {
+  max-height: 400px;
+  border-radius: 10px;
+}
+
+.projects-boxes {
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------------Styling for Astro Dash Project Page--------------- */
+
+.astro-dash-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
+.astro-dash-img {
+  margin-top: 30px;
+}
+
+.astro-dash-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+/* ---------------Styling for Tron Game Project Page--------------- */
+
+.tron-game-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.tron-game-img {
+  margin-top: 30px;
+}
+
+.tron-game-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+/* ---------------Styling for WebGL Project Page--------------- */
+
+.webgl-proj-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.img-info-side-by-side {
+  display: flex;
+  justify-content: space-between;
+}
+
+.webgl-img {
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.webgl-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+/* ---------------Styling for Bio Page--------------- */
+
+.pfp-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pfp {
+  border-radius: 200px;
+  max-width: 20%;
+}
+
+.info {
+  margin: 1rem auto 0;
+  max-width: 66%;
+  text-align: justify;
+}

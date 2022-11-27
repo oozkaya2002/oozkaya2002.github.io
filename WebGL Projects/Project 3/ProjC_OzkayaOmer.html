@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ProjC_OzkayaOmer</title>
+  </head>
+
+  <body onload="main()">
+    <p id = "lightModeString"> Light Mode: Blinn-Phong Lighting</p>
+
+    <p id = "shadeModeString"> Shader Mode: Gouraud Shading</p>
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <!-- <button type="button" onclick="VBO0toggle()">VBO-0 hide/show</button> -->
+      <!-- <button type="button" onclick="VBO1toggle()">Switch shading method</button> -->
+      <!-- <button type="button" onclick="VBO2toggle()">Phong Shading hide/show</button> -->
+      To look around the scene, use W, A, S, D to move the camera (forward, left, back, right), 
+      I, J, K, L to rotate where the camera is pointing towards, and Q and E to fly up and down 
+      (dependent on where the camera is pointing).
+    </p>
+
+    <p>
+      Change the fields below to change the lighting
+      <div id="fieldContainer">
+        <div id="Ambient">
+            <table>
+                <tr>
+                    <td>Ambient: </td>
+                    <td>R: <input type="text" id="AR" value="0.5"/></td>
+                    <td>G: <input type="text" id="AG" value="0.5"/></td>
+                    <td>B: <input type="text" id="AB" value="0.5"/></td>
+                </tr>
+                <tr>
+                    <td>Diffuse: </td>
+                    <td>R: <input type="text" id="DR" value="1.0"/></td>
+                    <td>G: <input type="text" id="DG" value="1.0"/></td>
+                    <td>B: <input type="text" id="DB" value="1.0"/></td>
+                </tr>
+                <tr>
+                    <td>Specular: </td>
+                    <td>R: <input type="text" id="SR" value="1.0"/></td>
+                    <td>G: <input type="text" id="SG" value="1.0"/></td>
+                    <td>B: <input type="text" id="SB" value="1.0"/></td>
+                </tr>
+                <tr>
+                    <td>Position: </td>
+                    <td>X: <input type="text" id="PX" value="8.0"/></td>
+                    <td>Y: <input type="text" id="PY" value="3.0"/></td>
+                    <td>Z: <input type="text" id="PZ" value="10.0"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </p>
+
+    <p>
+      Use F to turn off the world light, G to change the lighting method, and H to change the shading
+      method. For information about the materials used for the objects, see the console.
+    </p>
+
+
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)
+		<script src="../lib/glmatrix.js"></script>
+--> 
+		<script src="OzkayaOmer_VBObox-Lib.js"></script>
+    <script src="ProjC_OzkayaOmer.js"></script>
+  </body>
+</html>
